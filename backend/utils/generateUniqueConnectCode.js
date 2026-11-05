@@ -9,6 +9,7 @@ const generateUniqueConnectCode = async () => {
     code = generateCode();
     exists = await User.exists({ connectCode: code });
   } while (exists);
+  return code;
 };
 
 export default generateUniqueConnectCode;

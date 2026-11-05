@@ -29,7 +29,7 @@ class AuthController {
 
       //hash password
       // we are using salt to increase the strength of the password
-      const salt = bcrypt.genSalt(10);
+      const salt = await bcrypt.genSalt(10);
       const hashedPassword = await bcrypt.hash(password, salt);
 
       const user = new User({
