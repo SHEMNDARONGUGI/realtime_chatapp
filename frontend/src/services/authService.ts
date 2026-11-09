@@ -1,4 +1,3 @@
-import { LogOut } from "lucide-react";
 import apiClient from "../utils/apiClient";
 
 export const authService = {
